@@ -23,21 +23,55 @@ fractal.web.set('builder.dest', __dirname + '/build');
 // fractal.components.set('ext', '.handlebars');
 // fractal.docs.set('ext', '.html');
 
+// browsersync設定
+fractal
+  .web
+  .set('server.sync', true)
+fractal
+  .web
+  .set('server.syncOptions', {open: false}) // Auto Open
+  // react open :
+  // "start:parcel": "parcel ./jsx/index.html -p 4649 --open -d react",
+  // http://localhost:4649/
+
+// Staus
+fractal
+  .components
+  .set('default.status', 'wip') // default is 'ready'
+
 // Theme
 // require the Mandelbrot theme module
 const mandelbrot = require('@frctl/mandelbrot');
 
-// create a new instance with custom config options
 const myCustomisedTheme = mandelbrot({
-    skin: 'black',
-    // skin: {
-    //     name: 'skin-A',
-    //     accent: 'tomato',
-    //     complement: 'teal',
-    //     links: 'skyblue',
-    // }
-    highlightStyles: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/monokai.min.css',
-});
+  nav: [
+    'docs', 'search', 'components', 'information'
+  ],
+  //skin: 'theme-name',
+  styles: [
+    '', '/theme/black.css', ''
+  ],
+  highlightStyles: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/monokai.min.c' +
+      'ss',
+  lang: 'ja',
+  labels: {
+    search: {
+      placeholder: 'Search...'
+    }
+  },
+  // favicon: '/theme/img/favicon.png',
+  //panels: ['html', 'view', 'context', 'notes', 'info'],
+})
 
-// tell Fractal to use the configured theme by default
-fractal.web.theme(myCustomisedTheme);
+// myCustomisedTheme.addLoadPath(__dirname + '/src/theme-overrides')
+fractal
+  .web
+  .theme(myCustomisedTheme)
+
+/* Global Dummy Texts */
+fractal.set('dummy.title', '春風や惟然いねんが耳に馬の鈴')
+fractal.set(
+  'dummy.text',
+  'ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でし' +
+      'たから、いつでも楽長にいじめられるのでした。'
+)
