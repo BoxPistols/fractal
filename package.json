@@ -99,6 +99,7 @@
   },
   "scripts": {
     "dev": "fractal start --sync",
+    "watch": "sass --watch  --no-source-map public/scss/.:public/css/.",
     "clean": "lerna clean",
     "bootstrap": "lerna bootstrap --hoist --strict --ci --force-local",
     "eslint": "eslint . --ignore-path .gitignore",
