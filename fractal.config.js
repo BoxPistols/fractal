@@ -25,7 +25,9 @@ fractal.web.set('builder.dest', __dirname + '/build');
 
 // browsersync設定
 fractal.web.set('server.sync', true);
-fractal.web.set('server.syncOptions', { open: false }); // Auto Open
+fractal.web.set('server.syncOptions', {
+    open: false,
+}); // Auto Open
 // react open :
 // "start:parcel": "parcel ./jsx/index.html -p 4649 --open -d react",
 // http://localhost:4649/
@@ -50,7 +52,6 @@ const myCustomisedTheme = mandelbrot({
     // favicon: '/theme/img/favicon.png',
     //panels: ['html', 'view', 'context', 'notes', 'info'],
 });
-
 // myCustomisedTheme.addLoadPath(__dirname + '/src/theme-overrides')
 fractal.web.theme(myCustomisedTheme);
 
