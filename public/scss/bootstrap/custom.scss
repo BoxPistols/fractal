@@ -1,18 +1,23 @@
-$btn-background: #39a4d2;
+// Colors
+$primary: #2b64ba; // Button
+$btn-background: $primary;
 $btn-border: #56a1c5;
 $btn-color: #fff;
 @mixin button-variant($background, $border, $color) {
     color: #fff;
-    border: 2px solid $btn-border;
+    // border: 2px solid $btn-border;
     background-color: $btn-background;
 
     &:hover {
         color: $btn-color;
-        border: 2px solid $btn-background;
+        // border: 2px solid $btn-background;
+        background-color: $btn-border;
     }
 }
 
 .btn {
+    border: 'none';
+
     &.rad {
         border-radius: 3em;
     }
@@ -24,5 +29,5 @@ $btn-color: #fff;
 
 .btn {
     margin: 8px;
-    box-shadow: 2px 2px 8px #eee;
+    box-shadow: 2px 2px 8px #c;
 }
