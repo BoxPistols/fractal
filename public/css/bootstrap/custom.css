@@ -1,0 +1,19 @@
+.btn {
+  border: "none";
+}
+.btn.rad {
+  border-radius: 3em;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #2b64ba;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #56a1c5;
+}
+
+.btn {
+  margin: 8px;
+  box-shadow: 2px 2px 8px #c;
+}
