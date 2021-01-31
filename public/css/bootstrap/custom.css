@@ -1,0 +1,17 @@
+.btn.rad {
+  border-radius: 3em;
+}
+.btn-primary {
+  color: #fff;
+  border: 2px solid #56a1c5;
+  background-color: #39a4d2;
+}
+.btn-primary:hover {
+  color: #fff;
+  border: 2px solid #39a4d2;
+}
+
+.btn {
+  margin: 8px;
+  box-shadow: 2px 2px 8px #eee;
+}
