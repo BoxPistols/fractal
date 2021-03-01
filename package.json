@@ -108,7 +108,8 @@
     "format": "npm run eslint -- --fix",
     "test": "npm run validate && lerna run test",
     "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate"
+    "contributors:generate": "all-contributors generate",
+    "build": "fractal build"
   },
   "husky": {
     "hooks": {
